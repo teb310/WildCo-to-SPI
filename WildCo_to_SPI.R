@@ -264,6 +264,8 @@ image_data <- image_data %>%
     surveyor = staff_name) %>%
   mutate(
     count = na_if(count, 100)) %>%
+# ADD YOUR PROJECT SPECIES
+# Codes are at: http://a100.gov.bc.ca/pub/eswp/
   mutate(
     species_code = case_when(
       str_detect(species_code, regex("Odocoileus hemionus", ignore_case = TRUE)) ~ "M-ODHE",
